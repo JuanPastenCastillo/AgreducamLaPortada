@@ -1,0 +1,93 @@
+/* ______________________________
+ NAV BAR CONTAINER
+ _________________________________*/
+
+.containerNavBar {
+ background: rgba(215, 95, 75, 0.3);
+ display: grid;
+ grid-template-columns: 1fr 2fr;
+ grid-template-rows: 12vh;
+ grid-template-areas: "logo containerOfNavBarItem";
+ grid-area: logo;
+}
+
+.logoNavBar {
+ /* border:1px solid black; */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.containerOfNavBarItem {
+ /* border:3px solid tomato; */
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+ grid-template-rows: 10vh;
+ grid-area: containerOfNavBarItem;
+ margin: 0;
+ padding: 0;
+}
+
+.navBarItem {
+ /* border:1px solid blueviolet; */
+ /* background: blueviolet; */
+ list-style: none;
+ height: 12vh;
+}
+
+.navBarItem a {
+ /* padding:6vh 5vw; */
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-decoration: none;
+ color: black;
+}
+
+.navBarItem a:hover {
+ background-color: wheat;
+ border-bottom-left-radius: 50%;
+ border-bottom-right-radius: 50%;
+}
+
+/* #inicioItem {
+ grid-area: inicio;
+}
+
+#visionYMisionItem {
+ grid-area: visionYMision;
+}
+
+#serviciosItem {
+ grid-area: servicios;
+}
+
+#nuestroEquipoItem {
+ grid-area: nuestroEquipo;
+}
+
+#contactenosItem {
+ grid-area: contactenos;
+} */
+
+/* ______________________________
+ HERO SECTION
+ _________________________________*/
+
+/* ______________________________
+ VISION AND MISSION
+ _________________________________*/
+
+/* ______________________________
+ SERVICES
+ _________________________________*/
+
+/* ______________________________
+ OUR TEAM
+ _________________________________*/
+
+/* ______________________________
+ FOOTER
+ _________________________________*/
