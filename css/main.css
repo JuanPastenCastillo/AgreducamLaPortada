@@ -1,14 +1,31 @@
+html {
+ scroll-behavior: smooth;
+ scroll-snap-type: y proximity;
+}
+
 /* ______________________________
  NAV BAR CONTAINER
  _________________________________*/
 
 .containerNavBar {
- background: rgba(215, 95, 75, 0.3);
+ /* border-bottom: 1px solid black; */
+ background: linear-gradient( rgba(36, 139, 110, 0.2), rgba(170, 208, 221, 0.2));
+ /* background-color: linear-gradient(
+  rgba(53, 80, 112, 0.8),
+  rgba(109, 89, 122, 0.8),
+  rgba(181, 101, 118, 0.8),
+  rgba(229, 107, 111, 0.8),
+  rgba(234, 172, 139, 0.8),
+  rgba(170, 208, 221, 0.8),
+  rgba(36, 139, 110, 0.8),
+  rgba(36, 139, 110, 0.8)); */
  display: grid;
  grid-template-columns: 1fr 2fr;
  grid-template-rows: 12vh;
  grid-template-areas: "logo containerOfNavBarItem";
  grid-area: logo;
+ position: sticky;
+ top: 0;
 }
 
 .logoNavBar {
@@ -16,6 +33,11 @@
  display: flex;
  justify-content: center;
  align-items: center;
+ background-image: url(../images/termporalLogo.png);
+ background-repeat: no-repeat;
+ background-size: contain;
+ background-position: center;
+ outline: none;
 }
 
 .containerOfNavBarItem {
@@ -33,6 +55,8 @@
  /* background: blueviolet; */
  list-style: none;
  height: 12vh;
+ text-align: center;
+ vertical-align: middle;
 }
 
 .navBarItem a {
@@ -44,50 +68,163 @@
  align-items: center;
  text-decoration: none;
  color: black;
+ outline: none;
+ text-transform: uppercase;
 }
 
 .navBarItem a:hover {
  background-color: wheat;
- border-bottom-left-radius: 50%;
- border-bottom-right-radius: 50%;
-}
-
-/* #inicioItem {
- grid-area: inicio;
-}
-
-#visionYMisionItem {
- grid-area: visionYMision;
-}
-
-#serviciosItem {
- grid-area: servicios;
-}
-
-#nuestroEquipoItem {
- grid-area: nuestroEquipo;
+ box-shadow: inset 0 -10px black;
 }
 
 #contactenosItem {
- grid-area: contactenos;
-} */
+ text-decoration: underline overline;
+}
+
+#contactenosItem a:hover {
+ background-color: cornflowerblue;
+ color: white;
+}
 
 /* ______________________________
  HERO SECTION
  _________________________________*/
 
+.containerHeroSection {
+ /* border: 2px red solid; */
+ height: 180vh;
+ /* height: calc(130vh + 12vh + 8rem); */
+ /* background-image: linear-gradient(
+  rgba(53, 80, 112, 0.8),
+  rgba(109, 89, 122, 0.8),
+  rgba(181, 101, 118, 0.8),
+  rgba(229, 107, 111, 0.8),
+  rgba(234, 172, 139, 0.8),
+  rgba(170, 208, 221, 0.8),
+  rgba(36, 139, 110, 0.8),
+  rgba(36, 139, 110, 0.8)),
+   url(../images/beachAustralia.jpg); */
+ /* background-image: linear-gradient(
+  rgba(53, 80, 112, 0.2),
+  rgba(109, 89, 122, 0.2),
+  rgba(181, 101, 118, 0.2),
+  rgba(229, 107, 111, 0.2),
+  rgba(234, 172, 139, 0.2),
+  rgba(170, 208, 221, 0.2),
+  rgba(36, 139, 110, 0.2),
+  rgba(36, 139, 110, 0.2)),
+   url(../images/beachAustralia.jpg); */
+ background-image: linear-gradient( rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../images/beachAustralia.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+ display: flex;
+ flex-flow: column wrap;
+ justify-content: center;
+ align-items: center;
+ margin-top: -12vh;
+}
+
+.forScrollProperty {
+ scroll-snap-align: start;
+}
+
+.textOfHeroSection {
+ /* font-size: calc(100vw - 90vw); */
+ /* font-size: calc(9vw + 5vh); */
+ /* font-size: min(max(10vw, 31vw), 10vh); */
+ /* font-size:5vh; */
+ scroll-margin-top: 8rem;
+ font-size: 10vw;
+ font-size: clamp(2.9rem, 10vw, 11rem);
+ text-align: center;
+ margin: 0;
+}
+
+.parallaxGeneralSection {
+ min-height: 50vh;
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.parallaxHeroSection {
+ background-image: url(../images/laPortada.jpg)
+}
+
 /* ______________________________
  VISION AND MISSION
  _________________________________*/
+
+.visionYMission {
+ height: calc(100vh + 12vh);
+ padding-top: 12vh;
+ background-color: coral;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-template-areas: "vision mission";
+}
+
+.containerOfVisionYMission {
+ display: flex;
+ flex-flow: column;
+ justify-content: center;
+ align-items: center;
+ position:relative;
+}
+
+.containerOfVision {
+ border: 3px yellow solid;
+}
+
+.containerOfMission {
+ border: 3px floralwhite solid;
+}
+
+.parallaxVisionYMission {
+ background-image: url(../images/parallaxVisionYMission3.jpg);
+}
 
 /* ______________________________
  SERVICES
  _________________________________*/
 
+.services {
+ height: calc(100vh + 12vh);
+ background-color: darkslateblue;
+}
+
+.parallaxServices {
+ background-image: url(../images/services3.jpg);
+}
+
 /* ______________________________
  OUR TEAM
  _________________________________*/
 
+.ourTeam {
+ height: 100vh;
+ background-color: darkolivegreen;
+}
+
+.parallaxOurTeam {
+ background-image: url(../images/ourTeam2.jpg);
+ background-position: bottom left;
+}
+
 /* ______________________________
  FOOTER
  _________________________________*/
+
+.footer {
+ height: 100vh;
+ background-color: indigo;
+}
+
+.parallaxFooter {
+ background-image: url(../images/footerImage.jpg);
+ background-position: bottom center;
+ height: 100vh;
+ /* background-size:contain; */
+}
