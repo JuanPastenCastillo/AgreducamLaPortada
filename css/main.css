@@ -49,19 +49,13 @@ p {
  /* grid-area: logo; */
  display: -webkit-box;
  display: -ms-flexbox;
- display: flex;
- -webkit-box-pack: center;
-     -ms-flex-pack: center;
-         justify-content: center;
- -webkit-box-align: center;
-     -ms-flex-align: center;
-         align-items: center;
- background-image: url(../images/termporalLogo.png);
+ background-image: url(../images/AgreducamLogo.png);
  background-repeat: no-repeat;
  background-size: contain;
- background-position: center;
+ background-position: left;
  outline: none;
- margin-top: 1px;
+ margin: 0.5rem 0 0 5.5rem;
+ height:8rem;
 }
 
 .containerOfNavBarItem {
@@ -210,6 +204,10 @@ p {
  margin: 0;
 }
 
+.textOfHeroSection:first-child{
+ padding-top: 3rem;
+}
+
 .parallaxGeneralSection {
  height: 100vh;
  background-attachment: fixed;
@@ -243,7 +241,7 @@ p {
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
- padding-top: 13vh;
+ padding-top: 10rem;
  padding-bottom: 50vh;
 }
 
@@ -309,7 +307,7 @@ p {
 
 .ourTeam {
  /* height: 113vh; */
- padding-top: 13vh;
+ padding-top: 8rem;
  padding-bottom:13vh;
  /* background:linear-gradient(#EECF6D, #D5AC4E, #8B6220); */
  /* background:linear-gradient(#e66465, #9198e5); */
@@ -449,7 +447,7 @@ p {
      grid-template-areas: 
  "containerOfTitleAndContactData containerOfTitleAndContactData imageOfWorkTogether";
  color:black;
- padding: 5rem 0;
+ padding: 10rem 0;
  /* line-height:100px;  */
 }
 
@@ -482,7 +480,7 @@ p {
  /* justify-self:center; */
  /* align-self:end; */
  font-size:5rem;
- font-size:clamp(1.2rem, 10vw, 5rem);
+ font-size: clamp(2.2rem, 10vw, 11rem);
  margin:0;
  padding:0 0.7rem;
  /* height:100px; */
@@ -514,11 +512,18 @@ p {
  word-wrap: break-word;
 }
 
+
 .contactData{
  padding-left: 1rem;
  padding-right: 1rem;
  padding-bottom: 4rem;
 }
+
+
+#phoneContactData{
+ padding-top: 8rem;
+}
+
 #emailContactData{
  position:relative;
  padding-bottom: 8rem;
@@ -536,6 +541,10 @@ p {
 
 #emailTwo{
  top: 118px;
+}
+
+#emailThree{
+ top: 188px;
 }
 
 
@@ -613,6 +622,13 @@ _________________________________ */
  }
 }
 
+@media only screen and (max-width: 1030px){
+ .logoNavBar{
+  margin: 0;
+ }
+ 
+}
+
 
  @media only screen and (max-width: 960px){
  .containerOfNavBarItem{
@@ -642,9 +658,6 @@ _________________________________ */
  .navBarItem a{
   height: 1.5rem;
  }
- .containerOfAllPresentationOfCompanny{
-  padding-top: 4rem;
- }
 }
 
 
@@ -671,10 +684,15 @@ _________________________________ */
  .imageEmailContactData{
   width:50vw;
  }
-}
+/*  
+ @media only screen and (max-width: 623px){
+ .logoNavBar{
+  margin: 0;
+ }
+} */
 
 
-@media only screen and (max-width: 513px){
+@media only screen and (max-width: 623px){
  .containerNavBar{
   display:-ms-grid;
   display:grid;
@@ -691,20 +709,21 @@ _________________________________ */
   -ms-grid-column: 1;
   grid-area: logo;
   overflow-x:hidden;
+  background-position: center;
  }
  .containerOfNavBarItem{
   grid-area:navBarItems;
-  margin-top: 1.2rem;
+  margin-top: 3.5rem;
  }
  .textOfHeroSection {
  scroll-margin-top: 11rem;
  }
  .containerOfAllPresentationOfCompanny{
-  padding-top: 11rem;
+  padding-top: 13rem;
  }
  
  .ourTeam{
-  padding-top: 11rem;
+  padding-top: 13rem;
  }
 
  .containerOfEverySingularPhoto{
@@ -714,12 +733,12 @@ _________________________________ */
   height:20rem;
  }
  .workTogether {
-  padding-top: 11rem;
+  padding-top: 13rem;
  }
 }
 
 
-@media only screen and (max-width: 513px) {
+@media only screen and (max-width: 623px) {
  .logoNavBar{
   -ms-grid-row: 1;
   -ms-grid-column: 1;
