@@ -1,3 +1,4 @@
+
 html {
  scroll-behavior: smooth;
  scroll-snap-type: y proximity;
@@ -29,7 +30,7 @@ p {
   rgba(36, 139, 110, 0.8)); */
  display: grid;
  grid-template-columns: 1fr 2fr;
- grid-template-rows: 12vh;
+ grid-template-rows: 4rem;
  grid-template-areas: "logo containerOfNavBarItem";
  position: fixed;
  top: 0;
@@ -49,16 +50,16 @@ p {
  background-size: contain;
  background-position: center;
  outline: none;
- margin-top: 10px;
+ margin-top: 1px;
 }
 
 .containerOfNavBarItem {
  /* border:3px solid tomato; */
  display: grid;
  grid-template-columns: repeat(4, 1fr);
- grid-template-rows: 10vh;
+ grid-template-rows: 4rem;
  grid-area: containerOfNavBarItem;
- margin: 3px 10px 0 0;
+ margin: 1px 10px 0 0;
  padding: 0;
 }
 
@@ -66,10 +67,11 @@ p {
  /* border:1px solid blueviolet; */
  /* background: blueviolet; */
  list-style: none;
- height: 12vh;
+ /* height: 12vh; */
  text-align: center;
- vertical-align: middle;
- margin-left: 10px;
+ /* vertical-align: middle; */
+ margin-left: 7px;
+ font-size:10rem;
 }
 
 .navBarItem a {
@@ -83,9 +85,10 @@ p {
  outline: none;
  text-transform: uppercase;
  font-size: 2rem;
+ font-size:clamp(3vw, 7vw, 2rem);
  box-shadow: 1px 1px 10px 1px black;
  border-radius: 20px;
- padding: 0 2px 0 0;
+ padding: 2px 2px;
  background: rgba(36, 139, 110, 0.8);
 }
 
@@ -193,6 +196,7 @@ p {
  align-items: center;
  /* position: relative; */
  height:100%;
+ overflow-x:hidden;
 }
 
 .moreIndividualContainerOfPresentation {
@@ -213,11 +217,15 @@ p {
  margin: 0;
  text-decoration: underline;
  padding-top: 1vh;
+ padding-left: 1rem;
+ padding-right: 2rem;
 }
 
 .paragraphOfPresentation {
- font-size: clamp(1rem, 2vw, 3.5rem);
+ font-size: clamp(1.6rem, 3vw, 4rem);
  color: white;
+ padding-left: 1rem;
+ padding-right: 1rem;
 }
 
 /* ______________________________
@@ -227,6 +235,7 @@ p {
 .ourTeam {
  /* height: 113vh; */
  padding-top: 13vh;
+ padding-bottom:13vh;
  /* background:linear-gradient(#EECF6D, #D5AC4E, #8B6220); */
  /* background:linear-gradient(#e66465, #9198e5); */
  /* background: linear-gradient(rgba(236, 242, 248, 1) 0%, rgba(199, 215, 234, 1) 3%, rgba(162, 188, 221, 1) 6%); */
@@ -242,7 +251,7 @@ p {
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
- padding-bottom:2vh;
+ 
 }
 
 #containerOfTitleOfOurTeam{
@@ -252,7 +261,7 @@ p {
 }
 
 .titleOfOurTeam{
- font-size:clamp(2.3rem, 4.2vw, 7rem);
+ font-size:clamp(2.3rem, 10vw, 11rem);
  color:white;
  margin: 0;
  text-align: center;
@@ -292,9 +301,9 @@ p {
 
 .containerOfEverySingularPhoto img {
  /* background-attachment: fixed; */
- background-position: center;
- background-repeat: no-repeat;
- background-size: cover;
+ /* background-position: center; */
+ /* background-repeat: no-repeat; */
+ /* background-size: cover; */
  width: 100%;
  border-radius: 16px;
  height:30rem;
@@ -325,37 +334,124 @@ p {
  margin:0;
 }
 
-.parallaxOurTeam {
- background-image: url(../images/services3.jpg);
- /* background-position: center; */
-}
-
 /* ______________________________
- SERVICES
+ LET'S WORK TOGETHER
  _________________________________*/
 
-.services {
- height: 112vh;
- background-color: darkslateblue;
+.workTogether {
+ /* height: 100vh; */
+ /* background-color: indigo; */
+ /* scroll-margin-top: 3vh; */
+ background-image: url(../images/services3.jpg);
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ grid-template-rows: 1fr;
+ grid-template-areas: 
+ "containerOfTitleAndContactData containerOfTitleAndContactData imageOfWorkTogether";
+ color:black;
+ padding: 5rem 0;
+ /* line-height:100px;  */
 }
 
-.parallaxServices {
- background-image: url(../images/services3.jpg);
+.imageOfWorkTogether{
+ grid-area:imageOfWorkTogether;
+ background:url(../images/truckRightWorkTogether.png);
+ background-position: bottom left;
+ background-repeat: no-repeat;
+ background-size: cover;
+ margin-bottom: -14rem;
+ margin-left: -15rem;
 }
+
+.containerOfTitleAndContactData{
+ grid-area:containerOfTitleAndContactData;
+ border-radius: 16px ;
+ align-self:center;
+ width:100%;
+ margin-left: 1vw;
+}
+
+#titleWorkTogether{
+ /* grid-area:titleOfWorkTogether; */
+ /* justify-self:center; */
+ /* align-self:end; */
+ font-size:5rem;
+ font-size:clamp(1.2rem, 10vw, 5rem);
+ margin:0;
+ padding:0 0.7rem;
+ /* height:100px; */
+ background:linear-gradient(rgba(236, 192, 76, 0.6), rgba(224, 202, 60, 0.7));
+ /* width: 100%; */
+ text-align: center;
+ text-decoration: underline;
+ border-radius: 16px 16px 0 0;
+}
+
+#containerOfContactData{
+ /* grid-area:contactData; */
+ justify-self:center;
+ /* align-self:stretch; */
+ list-style: none;
+ /* font-size:3.5rem; */
+ font-size: clamp(1.6rem, 3vw, 3.5rem);
+ margin:0;
+ padding:2rem 0 0 0;
+ border-radius:  0 0 16px 16px;
+ background:linear-gradient(rgba(224, 202, 60, 0.8), rgba(19, 111, 99, 0.9), rgba(111, 135, 79, 0.9));
+ /* height:100%; */
+ /* word-break: break-all; */
+ word-wrap: break-word;
+}
+
+.contactData{
+ padding-left: 1rem;
+ padding-right: 1rem;
+ padding-bottom: 4rem;
+}
+#emailContactData{
+ position:relative;
+ padding-bottom: 8rem;
+}
+
+.imageEmailContactData{
+ position:absolute;
+ width:63vw;
+ left: 25px;
+}
+
+#emailOne{
+ top:55px;
+}
+
+#emailTwo{
+ top: 118px;
+}
+
+
+/* #directionContactData{
+ grid-area:direction;
+}
+
+#phoneContactData{
+ grid-area:phoneNumber;
+}
+
+#emailContactData{
+ grid-area:email;
+} */
+
 
 /* ______________________________
  FOOTER
- _________________________________*/
-
-.footer {
- height: 100vh;
- background-color: indigo;
-}
-
+_________________________________ */
  .parallaxFooter {
  background-image: url(../images/footerImage.jpg);
- background-position: bottom center;
- height: 100vh;
+ background-position: bottom left;
+ /* height: 100vh; */
  /* background-size:contain; */
 }
 
@@ -385,57 +481,67 @@ p {
  @media only screen and (max-width: 960px){
  .containerOfNavBarItem{
  grid-template-columns: 1fr 1fr;
- grid-template-rows: 5vh 5vh;
+ grid-template-rows: 1rem 3rem;
  grid-template-areas: 
  "startItem presentationOfCompanny"
  "ourTeamItem contactUsItem";
  }
- #startItem a{
+ #startItem {
   grid-area:startItem;
  }
- #presentationOfCompanny a{
+ #presentationOfCompanny {
   grid-area:presentationOfCompanny;
  }
- #ourTeamItem a{
+ #ourTeamItem {
   grid-area:ourTeamItem;
-  margin-top: 1vh;
+  margin-top: 1rem;
  }
- #contactUsItem a{
+ #contactUsItem {
   grid-area:contactUsItem;
-  margin-top: 1vh;
+  margin-top: 1rem;
  }
  
  .navBarItem a{
-  font-size: 3vw;
-  height: 5vh;
+  height: 1.5rem;
+ }
+ .containerOfAllPresentationOfCompanny{
+  padding-top: 4rem;
  }
 }
+
+@media only screen and (max-width: 700px){
+ .imageEmailContactData{
+  width:50vw;
+ }
+}
+
 
 @media only screen and (max-width: 513px){
  .containerNavBar{
   display:grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 6vh 6vh;
+  grid-template-rows: 5rem 1fr;
   grid-template-areas: 
   "logo"
   "navBarItems" ;
  }
  .logoNavBar{
   grid-area: logo;
+  overflow-x:hidden;
  }
  .containerOfNavBarItem{
   grid-area:navBarItems;
+  margin-top: 1.2rem;
  }
  .textOfHeroSection {
- scroll-margin-top: 18vh;
+ scroll-margin-top: 11rem;
  }
- 
  .containerOfAllPresentationOfCompanny{
-  scroll-margin-top: 5vh;
+  padding-top: 11rem;
  }
  
  .ourTeam{
-  scroll-margin-top: 3vh;
+  padding-top: 11rem;
  }
 
  .containerOfEverySingularPhoto{
@@ -443,5 +549,35 @@ p {
  }
  .containerOfEverySingularPhoto img{
   height:20rem;
+ }
+ .workTogether {
+  padding-top: 11rem;
+ }
+}
+
+
+@media only screen and (max-width: 366px){
+ .workTogether{
+  grid-template-areas: 
+ "containerOfTitleAndContactData containerOfTitleAndContactData containerOfTitleAndContactData";
+ overflow-x:hidden;
+ }
+ 
+ .imageOfWorkTogether{
+  display:none;
+ }
+ 
+ .containerOfTitleAndContactData{
+  margin-right: 1vw;
+  
+ }
+ .imageEmailContactData{
+  width:90vw;
+  left:15px;
+ }
+}
+@media only screen and (max-width: 244px){
+ #emailOne{
+ top:65px;
  }
 }
